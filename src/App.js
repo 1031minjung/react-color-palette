@@ -10,6 +10,17 @@ function getRandomColor() {
   return color;
 }
 
+function copyToClipboard(colorCode) {
+  navigator.clipboard.writeText(colorCode)
+  .then(() => {
+    alert(`Copied into your clipboard:  ${colorCode}`)
+  })
+  .catch(error => {
+    console.error('Filted to copy text: ', error)
+    alert('failed to copy the color code.')
+  })
+}
+
 function App() {
   const [colors, setColors] = useState([
     getRandomColor(),
@@ -32,6 +43,7 @@ function App() {
             key={index}
             className="color-box"
             style={{ backgroundColor: color }}
+            onClick={() => copyToClipboard(color)}
           >
             {index} - {color}
           </div>
