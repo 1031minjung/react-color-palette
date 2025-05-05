@@ -45,7 +45,7 @@ function App() {
             style={{ backgroundColor: color }}
             onClick={() => copyToClipboard(color)}
           >
-            {index} - {color}
+            {color}
           </div>
         ))}
       </div>
