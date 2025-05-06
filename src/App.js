@@ -122,7 +122,7 @@ function App() {
               style={{ backgroundColor: color, color: getReadableTextColor(color) }}
               onClick={() => copyToClipboard(color)}
             >
-              {index} - {color}
+              {color}
             </div>
           ))}
         </div>
