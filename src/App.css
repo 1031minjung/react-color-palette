@@ -129,7 +129,6 @@ a {
 @media only screen and (max-width: 800px) {
   .example {
     max-width: 90vw;
-    bottom: 0;
     section {
       h2 {
         font-size: 1.5em;
