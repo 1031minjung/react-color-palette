@@ -1,6 +1,12 @@
 .App {
   text-align: center;
   padding: 20px;
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  position: relative;
+  /* Make App a positioning context */
+  /* min-height: calc(100vh - 40px); Example: Viewport height minus App padding */
 }
 
 .palette {
@@ -15,10 +21,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; /* Adjust text color for better visibility */
   font-weight: bold;
-  border-radius: 8px; /* Add rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 button {
@@ -32,6 +38,103 @@ button {
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+.example-button {
+  margin-right: 5px;
+}
+.generate-new-color-button {
+  margin-left: 5px;
+}
+
 button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+
+a {
+  text-decoration: none;
+}
+
+.example {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+
+  nav>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+
+    li>a {
+      text-decoration: none;
+    }
+  }
+
+  header {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-right: 20px;
+
+      }
+    }
+  }
+  section {
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .example {
+    max-width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .example {
+    max-width: 80vw;
+    section {
+      h2 {
+        font-size: 2.0em;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .example {
+    max-width: 90vw;
+    bottom: 0;
+    section {
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 4px;
+      }
+    }
+  }
 }
