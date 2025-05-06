@@ -74,11 +74,11 @@ function App() {
   const [displayExample, setDisplayExample] = useState(false);
 
   const [palette, setPalette] = useState({
-    mainColor: '#bb684a',
-    subMainColor: '#ddb4a5',
-    accentColor: '#4497b5',
+    mainColor: '#3b4485',
+    subMainColor: '#9da2c2',
+    accentColor: '#c4bb7a',
     textColor: '#fff',
-    linkColor: '#5e3425',
+    linkColor: '#1e2243',
   });
 
   const toggleExample = () => {
